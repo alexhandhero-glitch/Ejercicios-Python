@@ -64,8 +64,8 @@ def ejercicio_2_1():
 
     servicios = ["SSH", "HTTP", "HTTPS", "FTP", "DNS"]
 
-    for servicio in servicios:
-        print(f"Verificando servicio: {servicio}")
+    for recorrido in servicios:
+        print(f"Verificando servicio: {recorrido}")
 
 
 def ejercicio_2_2():
@@ -206,31 +206,29 @@ def control_pass():
     # el if quedaria vacio y Python lanzaria IndentationError.
 
 
+
 # =============================================================================
 #  MAIN
 # =============================================================================
-def main():
-    print("=" * 60)
-    print("CLASE - SEMANA 3 - PARTE 2: BUCLE FOR + CONTROLES")
-    print("=" * 60)
+print("=" * 60)
+print("CLASE - SEMANA 3 - PARTE 2: BUCLE FOR + CONTROLES")
+print("=" * 60)
 
-    # --- For basico ---
-    ejercicio_2_1()
-    ejercicio_2_2()
-    ejercicio_2_3()
-    ejercicio_2_4()
-    ejercicio_2_5()
-
-    # --- Controles finos ---
-    control_break()
-    control_continue()
-    control_else_de_bucle()
-    control_pass()
-
-    print("\n" + "=" * 60)
-    print("FIN - Continuar con: clase_03_bucles_while.py")
-    print("=" * 60)
+# --- For basico ---
+# ejercicio_2_1()
+# ejercicio_2_2()
+# ejercicio_2_3()
+# ejercicio_2_4()
+# ejercicio_2_5()
+#
+# # --- Controles finos ---
+# control_break()
+# control_continue()
+# control_else_de_bucle()
+# control_pass()
 
 
-if __name__ == "__main__":
-    main()
+for x in range(0, 20):
+    print(f"Valor de X: {x}")
+
+
