@@ -32,11 +32,16 @@ def ejercicio_1_1():
     # OBSERVACION: El if mas simple posible. Si la condicion es verdadera,
     # ejecuta el bloque indentado. Si es falsa, no hace nada.
 
-    puerto = 22
+    puerto = int(input("Ingrese el puerto del servicio: "))
 
     if puerto == 22:
         print("Servicio detectado: SSH (acceso remoto cifrado)")
-
+    elif puerto == 80:
+        print("Servicio detectado: HTTP (navegacion web sin cifrado)")
+    elif puerto == 443:
+        print("Servicio detectado: HTTPS (navegacion web cifrada)")
+    else:
+        print("Servicio desconocido o no seguro")
     # CIERRE: Cambie el valor de "puerto" a 80 y vuelva a correr. No hay
     # rama "else", el programa continua sin imprimir nada.
 
@@ -97,8 +102,10 @@ def ejercicio_1_4():
 
     usuario_activo = True
     tiene_permiso = True
-    cuenta_bloqueada = False
-
+    cuenta_bloqueada = True
+    print(f"Usuario activo: {usuario_activo}, Tiene permiso: {tiene_permiso}, Cuenta bloqueada: {cuenta_bloqueada}")
+    print("Validando acceso al sistema...")
+    print(f"Si cuenta bloqueada es not {cuenta_bloqueada} == True")
     if usuario_activo and tiene_permiso and not cuenta_bloqueada:
         print("Acceso autorizado al sistema")
     else:
@@ -115,10 +122,10 @@ def ejercicio_1_5():
     # OBSERVACION: Un if puede contener otros if dentro. Cada nivel suma
     # 4 espacios mas de indentacion.
 
-    ip = "192.168.1.10"
+    ip_asignacion = "192.168.1.10"
     estado_host = "activo"
 
-    if ip.startswith("192.168."):
+    if ip_asignacion.startswith("192.168."):
         print("Host esta en la LAN")
 
         if estado_host == "activo":
@@ -138,21 +145,17 @@ def ejercicio_1_5():
 #  Para usar en clase: comente las llamadas que NO se vayan a ejecutar y
 #  deje solo la del ejercicio que se va a explicar en ese momento.
 # =============================================================================
-def main():
-    print("=" * 60)
-    print("CLASE - SEMANA 3 - PARTE 1: CONDICIONALES")
-    print("=" * 60)
+print("=" * 60)
+print("CLASE - SEMANA 3 - PARTE 1: CONDICIONALES")
+print("=" * 60)
 
-    ejercicio_1_1()
-    ejercicio_1_2()
-    ejercicio_1_3()
-    ejercicio_1_4()
-    ejercicio_1_5()
+# ejercicio_1_1()
+# ejercicio_1_2()
+# ejercicio_1_3()
+# ejercicio_1_4()
+ejercicio_1_5()
 
-    print("\n" + "=" * 60)
-    print("FIN - Continuar con: clase_02_bucles_for.py")
-    print("=" * 60)
+# print("\n" + "=" * 60)
+# print("FIN - Continuar con: clase_02_bucles_for.py")
+# print("=" * 60)
 
-
-if __name__ == "__main__":
-    main()
