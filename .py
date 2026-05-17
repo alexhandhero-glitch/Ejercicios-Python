@@ -11,4 +11,4 @@ def contar_vocales(texto):
     return contador
 
 print(contar_vocales("Python es genial"))   
-print(contar_vocales("MÚSICA"))
+print(contar_vocales("Hola"))
