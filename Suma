@@ -1,0 +1,7 @@
+precios = [20, 35, 15, 20]
+total_pagar = 0
+
+for precio in precios:
+    total_pagar += precio
+
+print("El total de la cuenta es:", total_pagar)
